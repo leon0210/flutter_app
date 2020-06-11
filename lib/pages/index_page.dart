@@ -17,7 +17,7 @@ class _IndexPageState extends State<IndexPage> {
     BottomNavigationBarItem(icon: Icon(CupertinoIcons.shopping_cart), title: Text('购物车')),
     BottomNavigationBarItem(icon: Icon(CupertinoIcons.profile_circled), title: Text('会员中心')),
   ];
-  final List allPages = [
+  final List _allPages = [
     HomePage(),
     CategoryPage(),
     CartPage(),
@@ -28,7 +28,7 @@ class _IndexPageState extends State<IndexPage> {
 
   @override
   void initState() {
-    currentPage = allPages[currentIndex];
+    currentPage = _allPages[currentIndex];
     super.initState();
   }
 
@@ -43,7 +43,7 @@ class _IndexPageState extends State<IndexPage> {
         onTap: (index) {
           setState(() {
             currentIndex = index;
-            currentPage = allPages[currentIndex];
+            currentPage = _allPages[currentIndex];
           });
         },
       ),
